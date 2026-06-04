@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bill Simmons OTR Score — full take history, sportsbook record, Hall of Fame calls, and breakdown by sport.">
+<title>Bill Simmons — OTR Score | OTRScore.com</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">OTR <div class="nav-logo-dot"></div><span class="nav-logo-sub">On The Record</span></a>
+  <div class="nav-links">
+    <a href="/personalities.html">Personalities</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
+  </div>
+  <a href="/personalities.html" class="nav-cta">All Personalities</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">&#9776;</button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="/personalities.html">Personalities</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/about.html">About</a>
+</div>
+
+<!-- PROFILE HERO -->
+<div class="profile-hero">
+  <div class="profile-hero-bg"></div>
+  <div class="profile-hero-inner">
+
+    <!-- PORTRAIT -->
+    <div class="profile-portrait">
+      <img src="/images/bill-simmons.jpg" alt="Bill Simmons" onerror="this.style.display='none';this.parentElement.style.background='#1a1a1c'">
+      <div class="profile-portrait-overlay"></div>
+    </div>
+
+    <!-- INFO -->
+    <div class="profile-info">
+      <div>
+        <div class="profile-eyebrow">
+          <div class="profile-outlet-chip">The Ringer</div>
+          <div class="profile-medium-chip">Podcast</div>
+          <div class="profile-medium-chip">Column</div>
+          <div class="profile-medium-chip">TV</div>
+          <div class="profile-medium-chip">𝕏</div>
+        </div>
+        <div class="profile-name">Bill<br>Simmons</div>
+        <div class="profile-title">Founder, The Ringer · NBA on TNT · The Bill Simmons Podcast</div>
+      </div>
+
+      <!-- OTR SCORE BOX -->
+      <div class="otr-box">
+        <div class="otr-box-label">OTR Score</div>
+        <div class="otr-box-row">
+          <div>
+            <div class="otr-box-number">791</div>
+            <div class="otr-box-rank">Ranked <span>#2 overall</span> · Top 5% all-time</div>
+          </div>
+          <div>
+            <div class="otr-box-stats">
+              <div><div class="otr-stat-val up">61.2%</div><div class="otr-stat-label">Accuracy</div></div>
+              <div><div class="otr-stat-val neu">214</div><div class="otr-stat-label">Takes</div></div>
+              <div><div class="otr-stat-val up">131</div><div class="otr-stat-label">Correct</div></div>
+              <div><div class="otr-stat-val dn">83</div><div class="otr-stat-label">Wrong</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPORTSBOOK SUB-SCORE -->
+      <div class="sb-box">
+        <div class="sb-box-platform">
+          <span style="font-size:13px">💙</span>
+          <div class="sb-box-platform-name">FanDuel</div>
+          <div class="sb-box-badge">Sportsbook Score</div>
+        </div>
+        <div class="sb-box-divider"></div>
+        <div class="sb-box-score">+341</div>
+        <div class="sb-box-stats">
+          <div><div class="sb-box-stat-val up">58%</div><div class="sb-box-stat-label">Accuracy</div></div>
+          <div><div class="sb-box-stat-val neu">67</div><div class="sb-box-stat-label">Public Bets</div></div>
+          <div><div class="sb-box-stat-val up">39</div><div class="sb-box-stat-label">Correct</div></div>
+          <div><div class="sb-box-stat-val dn" style="color:var(--red)">28</div><div class="sb-box-stat-label">Wrong</div></div>
+        </div>
+        <div class="sb-box-note">Difficulty set<br>by posted odds</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="profile-tabs">
+  <button class="profile-tab active" onclick="showProfileTab('pending', this)">In Play</button>
+  <button class="profile-tab" onclick="showProfileTab('history', this)">Take History</button>
+  <button class="profile-tab" onclick="showProfileTab('hof', this)">Hall of Fame</button>
+  <button class="profile-tab" onclick="showProfileTab('breakdown', this)">Breakdown</button>
+</div>
+
+<!-- IN PLAY -->
+<div class="profile-panel active" id="panel-pending">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+    <div class="section-label">Takes Currently In Play</div>
+    <div style="font-family:var(--font-display);font-size:18px;color:var(--muted)">7 open</div>
+  </div>
+  <div class="calls-stack">
+
+    <div class="call-card pending">
+      <div class="call-top">
+        <div class="call-quote">"Jayson Tatum will be a top-3 player in the league by the 2026–27 season. I'm not even debating this."</div>
+        <div class="call-right">
+          <div class="call-line pending">383</div>
+          <div class="call-line-label">OTR Line</div>
+          <div class="verdict-badge vb-pending">In Play</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">The Bill Simmons Podcast · Ep. 1,204</div>
+        <div class="call-date">Mar 14, 2026</div>
+        <div class="call-countdown">⏱ Resolves Oct 2027</div>
+        <div class="call-tags">
+          <span class="call-tag diff">Contrarian 2.5×</span>
+          <span class="call-tag horizon">Multi-season</span>
+          <span class="call-tag cat">NBA · Player</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-card pending">
+      <div class="call-top">
+        <div class="call-quote">"The Celtics are a dynasty. Three titles in five years — I'm saying it now."</div>
+        <div class="call-right">
+          <div class="call-line pending">540</div>
+          <div class="call-line-label">OTR Line</div>
+          <div class="verdict-badge vb-pending">In Play</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">NBA on TNT · Pre-game</div>
+        <div class="call-date">Jun 3, 2025</div>
+        <div class="call-countdown">⏱ Resolves Jun 2030</div>
+        <div class="call-tags">
+          <span class="call-tag diff">Wild 3×</span>
+          <span class="call-tag horizon">Era call</span>
+          <span class="call-tag cat">NBA · Franchise</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-card bet">
+      <div class="call-top">
+        <div>
+          <div style="margin-bottom:5px">
+            <span style="font-family:var(--font-mono);font-size:8px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:var(--radius);background:rgba(91,159,255,0.08);color:var(--fd);border:1px solid rgba(91,159,255,0.2)">💙 FanDuel · +165</span>
+          </div>
+          <div class="call-quote">"Locked in on OKC to win the West. Thunder all the way."</div>
+        </div>
+        <div class="call-right">
+          <div class="call-line pending">297</div>
+          <div class="call-line-label">OTR Line</div>
+          <div class="verdict-badge vb-pending">In Play</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">𝕏 @BillSimmons</div>
+        <div class="call-date">Apr 2, 2026</div>
+        <div class="call-tags">
+          <span class="call-tag diff">Consensus 1.5×</span>
+          <span class="call-tag cat">NBA · Playoff</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-bottom:14px" class="section-label">Recent Verdicts</div>
+  <div class="calls-stack">
+    <div class="call-card correct">
+      <div class="call-top">
+        <div class="call-quote">"Wemby wins Rookie of the Year — it's not even a competition."</div>
+        <div class="call-right">
+          <div class="call-line correct">+216</div>
+          <div class="call-line-label">Banked</div>
+          <div class="verdict-badge vb-correct">Correct ✓</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">The Bill Simmons Podcast</div>
+        <div class="call-date">Oct 2023 · Resolved Apr 2024</div>
+        <div class="call-tags">
+          <span class="call-tag diff">Consensus 1.5×</span>
+          <span class="call-tag cat">NBA · Player</span>
+        </div>
+      </div>
+    </div>
+    <div class="call-card wrong">
+      <div class="call-top">
+        <div class="call-quote">"The Lakers make the conference finals — LeBron is still that guy."</div>
+        <div class="call-right">
+          <div class="call-line wrong">−189</div>
+          <div class="call-line-label">Burned</div>
+          <div class="verdict-badge vb-wrong">Wrong ✗</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">The Bill Simmons Podcast</div>
+        <div class="call-date">Oct 2024 · Resolved May 2025</div>
+        <div class="call-tags">
+          <span class="call-tag diff">Bold 2×</span>
+          <span class="call-tag cat">NBA · Playoff</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAKE HISTORY -->
+<div class="profile-panel" id="panel-history">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
+    <div class="section-label">Full Take History</div>
+    <div style="font-family:var(--font-display);font-size:18px;color:var(--muted)">214 total</div>
+  </div>
+  <table style="width:100%;border-collapse:collapse">
+    <thead>
+      <tr style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(240,237,230,0.2)">
+        <th style="text-align:left;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Take</th>
+        <th style="text-align:left;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Sport</th>
+        <th style="text-align:left;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Source</th>
+        <th style="text-align:right;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Line</th>
+        <th style="text-align:center;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Verdict</th>
+        <th style="text-align:right;padding:0 10px 10px;border-bottom:1px solid var(--border);font-weight:400">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(240,237,230,0.04)">
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"Wemby wins Rookie of the Year."</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">Podcast</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">216</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-correct">Correct</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-display);font-size:18px;color:var(--green);text-align:right">+216</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(240,237,230,0.04)">
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"Boston goes back-to-back. This roster is different."</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">Column</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">270</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-correct">Correct</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-display);font-size:18px;color:var(--green);text-align:right">+270</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(240,237,230,0.04)">
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"Celtics cover tonight. #FanDuelPartner"</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px"><span style="font-family:var(--font-mono);font-size:8px;padding:2px 6px;border-radius:var(--radius);background:rgba(91,159,255,0.07);color:var(--fd);border:1px solid rgba(91,159,255,0.2)">💙 FanDuel</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">82</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-correct">Correct</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-display);font-size:18px;color:var(--green);text-align:right">+82</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(240,237,230,0.04)">
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"The Lakers make the conference finals."</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">Podcast</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">189</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-wrong">Wrong</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-display);font-size:18px;color:var(--red);text-align:right">−189</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(240,237,230,0.04)">
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"Knicks +7.5 live bet. @FanDuel"</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px"><span style="font-family:var(--font-mono);font-size:8px;padding:2px 6px;border-radius:var(--radius);background:rgba(91,159,255,0.07);color:var(--fd);border:1px solid rgba(91,159,255,0.2)">💙 FanDuel</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">248</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-wrong">Wrong</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-display);font-size:18px;color:var(--red);text-align:right">−248</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 10px;font-size:12px;font-style:italic;color:rgba(240,237,230,0.7);max-width:280px">"OKC to win the West. Thunder all the way."</td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">NBA</td>
+        <td style="padding:11px 10px"><span style="font-family:var(--font-mono);font-size:8px;padding:2px 6px;border-radius:var(--radius);background:rgba(91,159,255,0.07);color:var(--fd);border:1px solid rgba(91,159,255,0.2)">💙 FanDuel</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:11px;color:var(--muted);text-align:right">297</td>
+        <td style="padding:11px 10px;text-align:center"><span class="verdict-badge vb-pending">In Play</span></td>
+        <td style="padding:11px 10px;font-family:var(--font-mono);font-size:12px;color:var(--muted-2);text-align:right">—</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- HALL OF FAME -->
+<div class="profile-panel" id="panel-hof">
+  <div style="margin-bottom:18px" class="section-label">OTR Hall of Fame — Simmons Edition</div>
+  <div class="hof-grid">
+    <div class="hof-card fame">
+      <div class="hof-watermark">✓</div>
+      <div class="hof-label">🏆 Greatest Take</div>
+      <div class="hof-quote">"Giannis wins back-to-back MVPs and a title before he turns 30. He is the best player on the planet and it isn't close."</div>
+      <div class="hof-context">Oct 2018 · The Ringer · Wild (3×) · Era call</div>
+      <div class="hof-score">+486</div>
+    </div>
+    <div class="hof-card shame">
+      <div class="hof-watermark">✗</div>
+      <div class="hof-label">💀 Worst Take</div>
+      <div class="hof-quote">"Brooklyn has the best roster I've ever seen assembled in my lifetime. They win the title this year, next year, and the year after. It's a wrap."</div>
+      <div class="hof-context">Sep 2021 · Podcast · Wild (3×) · Deleted tweet −20 accountability</div>
+      <div class="hof-score">−560</div>
+    </div>
+    <div class="hof-card fame">
+      <div class="hof-watermark">✓</div>
+      <div class="hof-label">📈 Best Streak</div>
+      <div class="hof-quote">7 consecutive correct takes — NBA Draft 2022 through NBA Finals 2023. The best documented run in OTR history for an NBA analyst.</div>
+      <div class="hof-context">Jun 2022 – Jun 2023 · Mixed sources</div>
+      <div class="hof-score">+1,204</div>
+    </div>
+    <div class="hof-card shame">
+      <div class="hof-watermark">✗</div>
+      <div class="hof-label">🧊 Coldest Stretch</div>
+      <div class="hof-quote">4 wrong takes in 6 weeks during the 2024 NFL season — all involving the Patriots rebuild. Dropped from #1 to #4 on the leaderboard.</div>
+      <div class="hof-context">Oct – Nov 2024 · The Bill Simmons Podcast</div>
+      <div class="hof-score">−612</div>
+    </div>
+  </div>
+  <div style="margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px">
+    <div class="section-label" style="margin-bottom:12px">Accountability Record</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Voluntary corrections</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--green)">8</div>
+        <div style="font-size:11px;color:var(--muted)">Revisited wrong takes on air</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Deleted posts</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--red)">3</div>
+        <div style="font-size:11px;color:var(--muted)">Flagged and archived by OTR</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Integrity Score</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--yellow)">+44</div>
+        <div style="font-size:11px;color:var(--muted)">Net accountability adjustment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BREAKDOWN -->
+<div class="profile-panel" id="panel-breakdown">
+  <div class="breakdown-grid">
+    <div class="bk-card"><div class="bk-label">Accuracy Rate</div><div class="bk-val">61.2%</div><div class="bk-sub">131 correct of 214 resolved</div><div class="bar-track"><div class="bar-fill green" style="width:61.2%"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Avg OTR Line per take</div><div class="bk-val">234</div><div class="bk-sub">High boldness relative to peers</div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Avg Specificity</div><div class="bk-val">0.71</div><div class="bk-sub">Above average — tends to be specific</div><div class="bar-track"><div class="bar-fill green" style="width:71%"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Sportsbook Accuracy</div><div class="bk-val">58%</div><div class="bk-sub">FanDuel · 67 public bets</div><div class="bar-track"><div class="bar-fill green" style="width:58%"></div></div></div>
+  </div>
+
+  <div class="section-label" style="margin-bottom:10px">Accuracy by Sport</div>
+  <div class="sport-grid" style="margin-bottom:24px">
+    <div class="sport-card"><div class="sport-name">NBA</div><div class="sport-acc strong">71%</div><div class="sport-detail">88 takes · 63 correct</div></div>
+    <div class="sport-card"><div class="sport-name">NFL</div><div class="sport-acc weak">44%</div><div class="sport-detail">62 takes · 27 correct</div></div>
+    <div class="sport-card"><div class="sport-name">MLB</div><div class="sport-acc mid">58%</div><div class="sport-detail">40 takes · 23 correct</div></div>
+    <div class="sport-card"><div class="sport-name">NHL</div><div class="sport-acc mid">52%</div><div class="sport-detail">24 takes · 12 correct</div></div>
+  </div>
+
+  <div class="rivalry-card">
+    <div class="section-label" style="margin-bottom:6px">Head-to-Head</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Same topic — who got it right?</div>
+    <div class="rivalry-row"><div class="rivalry-name">vs. Russillo</div><div class="rivalry-track"><div class="rivalry-fill lose" style="width:45%"></div></div><div class="rivalry-rec">8–10 L</div></div>
+    <div class="rivalry-row"><div class="rivalry-name">vs. Cowherd</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:70%"></div></div><div class="rivalry-rec">14–6 W</div></div>
+    <div class="rivalry-row"><div class="rivalry-name">vs. S.A. Smith</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:65%"></div></div><div class="rivalry-rec">11–6 W</div></div>
+    <div class="rivalry-row"><div class="rivalry-name">vs. Portnoy</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:80%"></div></div><div class="rivalry-rec">16–4 W</div></div>
+    <div class="rivalry-row"><div class="rivalry-name">vs. Big Cat</div><div class="rivalry-track"><div class="rivalry-fill lose" style="width:42%"></div></div><div class="rivalry-rec">5–7 L</div></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">OTR <div class="nav-logo-dot"></div></div>
+      <div class="footer-tagline">No take left unaccounted.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/personalities.html">Personalities</a>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="footer-right">
+      <div class="footer-copy">© 2026 OTRScore.com</div>
+      <div class="footer-legal"><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="/scripts/main.js"></script>
+</body>
+</html>

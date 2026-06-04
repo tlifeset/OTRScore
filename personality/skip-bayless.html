@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Skip Bayless OTR Score — full take history, breakdown by sport, and Hall of Fame calls.">
+<title>Skip Bayless — OTR Score | OTRScore.com</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">OTR <div class="nav-logo-dot"></div><span class="nav-logo-sub">On The Record</span></a>
+  <div class="nav-links">
+    <a href="/personalities.html">Personalities</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
+  </div>
+  <a href="/personalities.html" class="nav-cta">All Personalities</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">&#9776;</button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="/personalities.html">Personalities</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/about.html">About</a>
+</div>
+
+<div class="profile-hero">
+  <div class="profile-hero-bg"></div>
+  <div class="profile-hero-inner">
+    <div class="profile-portrait">
+      <img src="/images/skip-bayless.jpg" alt="Skip Bayless" onerror="this.style.display='none';this.parentElement.style.background='#2a2010'">
+      <div class="profile-portrait-overlay"></div>
+    </div>
+    <div class="profile-info">
+      <div>
+        <div class="profile-eyebrow">
+          <div class="profile-outlet-chip">YouTube / Undisputed</div>
+          <div class="profile-medium-chip">YouTube</div><div class="profile-medium-chip">Podcast</div><div class="profile-medium-chip">𝕏</div>
+        </div>
+        <div class="profile-name">Skip<br>Bayless</div>
+        <div class="profile-title">Skip Bayless Show · YouTube · Undisputed</div>
+      </div>
+      <div class="otr-box">
+        <div class="otr-box-label">OTR Score</div>
+        <div class="otr-box-row">
+          <div>
+            <div class="otr-box-number">498</div>
+            <div class="otr-box-rank">Ranked <span>#9 overall</span></div>
+          </div>
+          <div>
+            <div class="otr-box-stats">
+              <div><div class="otr-stat-val down">41.6%</div><div class="otr-stat-label">Accuracy</div></div>
+              <div><div class="otr-stat-val neu">388</div><div class="otr-stat-label">Takes</div></div>
+              <div><div class="otr-stat-val up">162</div><div class="otr-stat-label">Correct</div></div>
+              <div><div class="otr-stat-val dn">226</div><div class="otr-stat-label">Wrong</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;margin-top:8px;justify-content:flex-end">
+              <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)">30d</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--red)">▼ −14 this month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sb-box">
+        <div class="sb-box-platform">
+          <span style="font-size:13px">💙</span>
+          <div class="sb-box-platform-name" style="color:#5B9FFF">FanDuel</div>
+          <div class="sb-box-badge" style="background:rgba(91,159,255,0.04);color:#5B9FFF;border:1px solid rgba(91,159,255,0.12)">Sportsbook Score</div>
+        </div>
+        <div class="sb-box-divider" style="background:rgba(91,159,255,0.12)"></div>
+        <div class="sb-box-score" style="color:var(--red)">−214</div>
+        <div class="sb-box-stats">
+          <div><div class="sb-box-stat-val dn" style="color:var(--red)">38%</div><div class="sb-box-stat-label">Accuracy</div></div>
+          <div><div class="sb-box-stat-val neu">102</div><div class="sb-box-stat-label">Public Bets</div></div>
+          <div><div class="sb-box-stat-val up" style="color:var(--green)">39</div><div class="sb-box-stat-label">Correct</div></div>
+          <div><div class="sb-box-stat-val" style="color:var(--red)">63</div><div class="sb-box-stat-label">Wrong</div></div>
+        </div>
+        <div class="sb-box-note">Difficulty set by posted odds</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-tabs">
+  <button class="profile-tab active" onclick="showProfileTab('pending',this)">In Play</button>
+  <button class="profile-tab" onclick="showProfileTab('history',this)">Take History</button>
+  <button class="profile-tab" onclick="showProfileTab('hof',this)">Hall of Fame</button>
+  <button class="profile-tab" onclick="showProfileTab('breakdown',this)">Breakdown</button>
+</div>
+
+<div class="profile-panel active" id="panel-pending">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+    <div class="section-label">Takes Currently In Play</div>
+    <div style="font-family:var(--font-display);font-size:18px;color:var(--muted)">18 open</div>
+  </div>
+  <div class="calls-stack">
+    <div class="call-card pending">
+      <div class="call-top">
+        <div class="call-quote">Pending takes will be populated as real data is added. Check back as OTR tracks new calls from Skip Bayless.</div>
+        <div class="call-right">
+          <div class="call-line pending">—</div>
+          <div class="call-line-label">OTR Line</div>
+          <div class="verdict-badge vb-pending">In Play</div>
+        </div>
+      </div>
+      <div class="call-bottom">
+        <div class="call-source">Data population in progress</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-panel" id="panel-history">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
+    <div class="section-label">Full Take History</div>
+    <div style="font-family:var(--font-display);font-size:18px;color:var(--muted)">388 total</div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center">
+    <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Full history loading</div>
+    <div style="font-size:13px;color:var(--muted-2)">All 388 takes from Skip Bayless are being verified and will appear here shortly. Scores reflect verified data only.</div>
+  </div>
+</div>
+
+<div class="profile-panel" id="panel-hof">
+  <div style="margin-bottom:18px" class="section-label">OTR Hall of Fame — Skip Edition</div>
+  <div class="hof-grid">
+    <div class="hof-card fame">
+      <div class="hof-watermark">✓</div>
+      <div class="hof-label">🏆 Greatest Take</div>
+      <div class="hof-quote">"Tom Brady is the greatest of all time and will retire with 8 Super Bowl rings."</div>
+      <div class="hof-context">Feb 2017 · Undisputed · Bold (2×) · Era call</div>
+      <div class="hof-score">+324</div>
+    </div>
+    <div class="hof-card shame">
+      <div class="hof-watermark">✗</div>
+      <div class="hof-label">💀 Worst Take</div>
+      <div class="hof-quote">"Dak Prescott is an elite quarterback. Dallas wins the NFC this year — I've never been more sure of anything."</div>
+      <div class="hof-context">Sep 2023 · Undisputed · Bold (2×) · Season call</div>
+      <div class="hof-score">−270</div>
+    </div>
+  </div>
+  <div style="margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px">
+    <div class="section-label" style="margin-bottom:12px">Accountability Record</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Voluntary corrections</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--green)">1</div>
+        <div style="font-size:11px;color:var(--muted)">Revisited wrong takes on air</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Deleted posts</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--red)">18</div>
+        <div style="font-size:11px;color:var(--muted)">Flagged and archived by OTR</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Integrity Score</div>
+        <div style="font-family:var(--font-display);font-size:28px;color:var(--red)">−122</div>
+        <div style="font-size:11px;color:var(--muted)">Net accountability adjustment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-panel" id="panel-breakdown">
+  <div class="breakdown-grid">
+    <div class="bk-card"><div class="bk-label">Accuracy Rate</div><div class="bk-val">41.6%</div><div class="bk-sub">162 correct of 370 resolved</div><div class="bar-track"><div class="bar-fill " style="width:41.6%"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Takes In Play</div><div class="bk-val">18</div><div class="bk-sub">Awaiting resolution · Lines locked</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:var(--yellow)"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Correct Takes</div><div class="bk-val">162</div><div class="bk-sub">Points banked over career</div><div class="bar-track"><div class="bar-fill green" style="width:41.6%"></div></div></div>
+    <div class="bk-card"><div class="bk-label">Wrong Takes</div><div class="bk-val">226</div><div class="bk-sub">Points burned over career</div><div class="bar-track"><div class="bar-fill" style="width:58.4%"></div></div></div>
+  </div>
+  <div class="section-label" style="margin-bottom:10px">Accuracy by Sport</div>
+  <div class="sport-grid" style="margin-bottom:24px">
+    
+    <div class="sport-card">
+      <div class="sport-name">NFL</div>
+      <div class="sport-acc weak">46%</div>
+      <div class="sport-detail">162 takes</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-name">NBA</div>
+      <div class="sport-acc weak">38%</div>
+      <div class="sport-detail">142 takes</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-name">MLB</div>
+      <div class="sport-acc weak">40%</div>
+      <div class="sport-detail">56 takes</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-name">NHL</div>
+      <div class="sport-acc weak">36%</div>
+      <div class="sport-detail">28 takes</div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">OTR <div class="nav-logo-dot"></div></div>
+      <div class="footer-tagline">No take left unaccounted.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/personalities.html">Personalities</a>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="footer-right">
+      <div class="footer-copy">© 2026 OTRScore.com</div>
+      <div class="footer-legal"><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="/scripts/main.js"></script>
+</body>
+</html>

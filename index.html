@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OTR holds sports media's biggest personalities accountable for every prediction, hot take, and bold call — scored publicly, permanently.">
+<meta property="og:title" content="OTR — On The Record">
+<meta property="og:description" content="Every take. On record. Forever.">
+<meta property="og:image" content="/images/og-image.jpg">
+<meta property="og:url" content="https://otrscore.com">
+<meta name="twitter:card" content="summary_large_image">
+<title>OTR — On The Record | Sports Media Accountability</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">
+    OTR <div class="nav-logo-dot"></div>
+    <span class="nav-logo-sub">On The Record</span>
+  </a>
+  <div class="nav-links">
+    <a href="/personalities.html">Personalities</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
+  </div>
+  <a href="/personalities.html" class="nav-cta">Explore Scores</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">&#9776;</button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="/personalities.html">Personalities</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/about.html">About</a>
+</div>
+
+<!-- LIVE TICKER -->
+<div class="ticker-bar" aria-label="Live verdicts">
+  <div class="ticker-label">Live Verdicts</div>
+  <div class="ticker-track">
+    <div class="ticker-items" id="tickerItems">
+      <span class="ticker-item up">Cowherd — Celtics dynasty call ▲ CORRECT +42pts</span>
+      <span class="ticker-item down">S.A. Smith — Bronny top-5 pick ▼ WRONG −28pts</span>
+      <span class="ticker-item up">Simmons — Wemby ROTY ▲ CORRECT +216pts</span>
+      <span class="ticker-item down">Portnoy — Chiefs 3-peat ▼ WRONG −540pts</span>
+      <span class="ticker-item up">Russillo — Lakers miss playoffs ▲ CORRECT +33pts</span>
+      <span class="ticker-item down">Big Cat — Bears win 12 games ▼ WRONG −41pts</span>
+      <span class="ticker-item up">Simmons — Celtics cover −220 💙 FD ▲ CORRECT +82pts</span>
+      <span class="ticker-item down">Portnoy — Knicks +7.5 live 🟠 DK ▼ WRONG −248pts</span>
+      <!-- duplicated for seamless loop -->
+      <span class="ticker-item up">Cowherd — Celtics dynasty call ▲ CORRECT +42pts</span>
+      <span class="ticker-item down">S.A. Smith — Bronny top-5 pick ▼ WRONG −28pts</span>
+      <span class="ticker-item up">Simmons — Wemby ROTY ▲ CORRECT +216pts</span>
+      <span class="ticker-item down">Portnoy — Chiefs 3-peat ▼ WRONG −540pts</span>
+      <span class="ticker-item up">Russillo — Lakers miss playoffs ▲ CORRECT +33pts</span>
+      <span class="ticker-item down">Big Cat — Bears win 12 games ▼ WRONG −41pts</span>
+      <span class="ticker-item up">Simmons — Celtics cover −220 💙 FD ▲ CORRECT +82pts</span>
+      <span class="ticker-item down">Portnoy — Knicks +7.5 live 🟠 DK ▼ WRONG −248pts</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Accountability for sports media</div>
+    <h1 class="hero-headline">
+      Every call.<br>
+      On <span class="hero-red">Record.</span><br>
+      Forever.
+    </h1>
+    <p class="hero-sub">We track every bold prediction from sports media's biggest personalities — scores, draft grades, franchise calls — and score them publicly. No more running from bad takes.</p>
+    <div class="hero-actions">
+      <a href="/personalities.html" class="btn-primary">Explore Personalities</a>
+      <a href="/methodology.html" class="btn-ghost">How scoring works →</a>
+    </div>
+    <div class="hero-sports">
+      <span class="sport-tag">NFL</span>
+      <span class="sport-tag">NBA</span>
+      <span class="sport-tag">MLB</span>
+      <span class="sport-tag">NHL</span>
+    </div>
+  </div>
+  <div class="hero-stat-strip">
+    <div class="hero-stat">
+      <div class="hero-stat-val">6</div>
+      <div class="hero-stat-label">Personalities tracked</div>
+    </div>
+    <div class="hero-stat-div"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">1,629</div>
+      <div class="hero-stat-label">Takes on record</div>
+    </div>
+    <div class="hero-stat-div"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">69</div>
+      <div class="hero-stat-label">Open takes</div>
+    </div>
+    <div class="hero-stat-div"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">54.8%</div>
+      <div class="hero-stat-label">Avg accuracy</div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERBOARD -->
+<section class="section" id="leaderboard">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">OTR Leaderboard</div>
+      <a href="/personalities.html" class="section-link">View all →</a>
+    </div>
+
+    <div class="lb-table">
+      <div class="lb-header">
+        <span class="lb-h-rank">#</span>
+        <span class="lb-h-name">Personality</span>
+        <span class="lb-h-score">OTR Score</span>
+        <span class="lb-h-acc">Accuracy</span>
+        <span class="lb-h-pending">In Play</span>
+        <span class="lb-h-trend">Trend</span>
+        <span class="lb-h-sb">SB Score</span>
+      </div>
+
+      <a href="/personality/ryen-russillo.html" class="lb-row top">
+        <div class="lb-rank top">01</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#1a2540">RR</div>
+          <div>
+            <div class="lb-name">Ryen Russillo</div>
+            <div class="lb-outlet">Barstool Sports</div>
+          </div>
+        </div>
+        <div class="lb-score">847</div>
+        <div class="lb-acc up">68.4%</div>
+        <div class="lb-pending">
+          <span class="pending-num">9</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend up">▲ +12%
+          <div class="mini-spark">
+            <div class="ms" style="height:35%;background:#3DBF7A"></div>
+            <div class="ms" style="height:55%;background:#3DBF7A"></div>
+            <div class="ms" style="height:75%;background:#3DBF7A"></div>
+            <div class="ms" style="height:90%;background:#3DBF7A"></div>
+            <div class="ms" style="height:100%;background:#3DBF7A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag fd">💙 FD</div>
+          <div class="sb-num pos">+188</div>
+        </div>
+      </a>
+
+      <a href="/personality/bill-simmons.html" class="lb-row">
+        <div class="lb-rank">02</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#2a1a30">BS</div>
+          <div>
+            <div class="lb-name">Bill Simmons</div>
+            <div class="lb-outlet">The Ringer</div>
+          </div>
+        </div>
+        <div class="lb-score">791</div>
+        <div class="lb-acc up">61.2%</div>
+        <div class="lb-pending">
+          <span class="pending-num">7</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend down">▼ −3%
+          <div class="mini-spark">
+            <div class="ms" style="height:80%;background:#3DBF7A"></div>
+            <div class="ms" style="height:55%;background:#E84B2A"></div>
+            <div class="ms" style="height:40%;background:#E84B2A"></div>
+            <div class="ms" style="height:60%;background:#3DBF7A"></div>
+            <div class="ms" style="height:45%;background:#E84B2A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag fd">💙 FD</div>
+          <div class="sb-num pos">+341</div>
+        </div>
+      </a>
+
+      <a href="/personality/colin-cowherd.html" class="lb-row">
+        <div class="lb-rank">03</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#2a1a10">CC</div>
+          <div>
+            <div class="lb-name">Colin Cowherd</div>
+            <div class="lb-outlet">Fox Sports</div>
+          </div>
+        </div>
+        <div class="lb-score">734</div>
+        <div class="lb-acc up">58.8%</div>
+        <div class="lb-pending">
+          <span class="pending-num">14</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend up">▲ +6%
+          <div class="mini-spark">
+            <div class="ms" style="height:40%;background:#E84B2A"></div>
+            <div class="ms" style="height:55%;background:#3DBF7A"></div>
+            <div class="ms" style="height:72%;background:#3DBF7A"></div>
+            <div class="ms" style="height:88%;background:#3DBF7A"></div>
+            <div class="ms" style="height:100%;background:#3DBF7A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag fd">💙 FD</div>
+          <div class="sb-num pos">+92</div>
+        </div>
+      </a>
+
+      <a href="/personality/stephen-a-smith.html" class="lb-row">
+        <div class="lb-rank">04</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#1a2010">SA</div>
+          <div>
+            <div class="lb-name">Stephen A. Smith</div>
+            <div class="lb-outlet">ESPN · First Take</div>
+          </div>
+        </div>
+        <div class="lb-score">612</div>
+        <div class="lb-acc mid">49.1%</div>
+        <div class="lb-pending">
+          <span class="pending-num">22</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend down">▼ −11%
+          <div class="mini-spark">
+            <div class="ms" style="height:70%;background:#3DBF7A"></div>
+            <div class="ms" style="height:50%;background:#E84B2A"></div>
+            <div class="ms" style="height:35%;background:#E84B2A"></div>
+            <div class="ms" style="height:22%;background:#E84B2A"></div>
+            <div class="ms" style="height:14%;background:#E84B2A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag none">No deal</div>
+          <div class="sb-num na">—</div>
+        </div>
+      </a>
+
+      <a href="/personality/big-cat.html" class="lb-row">
+        <div class="lb-rank">05</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#1a1a2a">BC</div>
+          <div>
+            <div class="lb-name">Big Cat</div>
+            <div class="lb-outlet">Barstool Sports</div>
+          </div>
+        </div>
+        <div class="lb-score">589</div>
+        <div class="lb-acc mid">52.3%</div>
+        <div class="lb-pending">
+          <span class="pending-num">11</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend down">▼ −8%
+          <div class="mini-spark">
+            <div class="ms" style="height:60%;background:#3DBF7A"></div>
+            <div class="ms" style="height:45%;background:#E84B2A"></div>
+            <div class="ms" style="height:36%;background:#E84B2A"></div>
+            <div class="ms" style="height:28%;background:#E84B2A"></div>
+            <div class="ms" style="height:20%;background:#E84B2A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag dk">🟠 DK</div>
+          <div class="sb-num neg">−290</div>
+        </div>
+      </a>
+
+      <a href="/personality/dave-portnoy.html" class="lb-row">
+        <div class="lb-rank">06</div>
+        <div class="lb-identity">
+          <div class="lb-avatar" style="background:#2a1010">DP</div>
+          <div>
+            <div class="lb-name">Dave Portnoy</div>
+            <div class="lb-outlet">Barstool Sports</div>
+          </div>
+        </div>
+        <div class="lb-score">544</div>
+        <div class="lb-acc down">38.2%</div>
+        <div class="lb-pending">
+          <span class="pending-num">6</span>
+          <span class="pending-label">takes</span>
+        </div>
+        <div class="lb-trend down">▼ −18%
+          <div class="mini-spark">
+            <div class="ms" style="height:50%;background:#3DBF7A"></div>
+            <div class="ms" style="height:35%;background:#E84B2A"></div>
+            <div class="ms" style="height:25%;background:#E84B2A"></div>
+            <div class="ms" style="height:15%;background:#E84B2A"></div>
+            <div class="ms" style="height:8%;background:#E84B2A"></div>
+          </div>
+        </div>
+        <div class="lb-sb">
+          <div class="sb-flag dk">🟠 DK</div>
+          <div class="sb-num neg">−380</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED TAKE -->
+<section class="section alt" id="featured">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Take of the Week — Under Review</div>
+    </div>
+    <div class="featured-take">
+      <div class="ft-who">
+        <div class="ft-avatar" style="background:#2a1010">DP</div>
+        <div>
+          <div class="ft-name">Dave Portnoy</div>
+          <div class="ft-outlet">Barstool Sports · Sep 4, 2024</div>
+        </div>
+        <div class="ft-verdict wrong">WRONG</div>
+      </div>
+      <blockquote class="ft-quote">
+        "The Chiefs win the Super Bowl again. Three in a row. Book it. I'm not even talking about this as a debate."
+      </blockquote>
+      <div class="ft-meta">
+        <div class="ft-tags">
+          <span class="call-tag diff">Wild (3×)</span>
+          <span class="call-tag cat">NFL · Championship</span>
+          <span class="call-tag horizon">Era call</span>
+        </div>
+        <div class="ft-line">
+          <div class="ft-line-label">OTR Line</div>
+          <div class="ft-line-num wrong">−540</div>
+        </div>
+      </div>
+      <div class="ft-source">Source: Super Bowl LIX Result · Feb 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">How OTR Works</div>
+      <a href="/methodology.html" class="section-link">Full methodology →</a>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-title">We capture every take</div>
+        <div class="how-desc">Podcasts, radio, TV, columns, social media — every public prediction from tracked personalities is ingested, transcribed, and classified automatically.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-title">Every take gets a Line</div>
+        <div class="how-desc">The OTR Line is calculated from four factors: how bold the call is, how specific the language is, the time horizon, and the category. Bolder, more specific calls carry bigger Lines.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-title">Outcomes are verified</div>
+        <div class="how-desc">When results come in, takes are verified against live sports data. Correct calls bank the full Line. Wrong calls lose it. No partial credit. No running from it.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">04</div>
+        <div class="how-title">Scores are permanent</div>
+        <div class="how-desc">The OTR Score is a cumulative running total. It goes up and down as takes resolve. Deleted tweets are archived. Retroactive reframes are flagged. Nothing disappears.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">OTR <div class="nav-logo-dot"></div></div>
+      <div class="footer-tagline">No take left unaccounted.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/personalities.html">Personalities</a>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="footer-right">
+      <div class="footer-copy">© 2026 OTRScore.com</div>
+      <div class="footer-legal">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/scripts/main.js"></script>
+</body>
+</html>

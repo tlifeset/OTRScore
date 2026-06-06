@@ -1,921 +1,364 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bill Simmons OTR Score — full take history, sportsbook record, Hall of Fame calls, and breakdown by sport.">
-<title>Bill Simmons — OTR Score | OTRScore.com</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles/main.css">
-<style>
-.take-section-head {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding: 20px 0 10px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.take-section-head span {
-  font-family: var(--font-display);
-  font-size: 16px;
-  color: var(--muted);
-}
-.ou-tag {
-  font-family: var(--font-mono);
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: var(--radius);
-  background: rgba(240,237,230,0.05);
-  color: var(--muted);
-  border: 1px solid var(--border);
-}
-.ou-tag.over { background: rgba(61,191,122,0.08); color: var(--green); border-color: rgba(61,191,122,0.2); }
-.ou-tag.under { background: rgba(232,75,42,0.08); color: var(--red); border-color: rgba(232,75,42,0.2); }
-.score-summary {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin-bottom: 20px;
-  padding: 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-.score-summary-item { text-align: center; }
-.score-summary-val { font-family: var(--font-display); font-size: 28px; line-height: 1; }
-.score-summary-val.pos { color: var(--green); }
-.score-summary-val.neg { color: var(--red); }
-.score-summary-val.neu { color: var(--ink); }
-.score-summary-label { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
-</style>
-</head>
-<body>
+OTR
 
-<nav class="nav" id="nav">
-  <a href="/" class="nav-logo">OTR <div class="nav-logo-dot"></div><span class="nav-logo-sub">On The Record</span></a>
-  <div class="nav-links">
-    <a href="/personalities.html">Personalities</a>
-    <a href="/methodology.html">Methodology</a>
-    <a href="/about.html">About</a>
-  </div>
-  <a href="/personalities.html" class="nav-cta">All Personalities</a>
-  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">&#9776;</button>
-</nav>
-<div class="mobile-nav" id="mobileNav">
-  <a href="/personalities.html">Personalities</a>
-  <a href="/methodology.html">Methodology</a>
-  <a href="/about.html">About</a>
-</div>
+On The Record
+Personalities Methodology About 
+All Personalities ☰ 
+Personalities Methodology About 
 
-<!-- PROFILE HERO -->
-<div class="profile-hero">
-  <div class="profile-hero-bg"></div>
-  <div class="profile-hero-inner">
-    <div class="profile-portrait">
-      <img src="/images/bill-simmons.jpg" alt="Bill Simmons" onerror="this.style.display='none';this.parentElement.style.background='#1a1a1c'">
-      <div class="profile-portrait-overlay"></div>
-    </div>
-    <div class="profile-info">
-      <div>
-        <div class="profile-eyebrow">
-          <div class="profile-outlet-chip">The Ringer</div>
-          <div class="profile-medium-chip">Podcast</div>
-          <div class="profile-medium-chip">Column</div>
-          <div class="profile-medium-chip">TV</div>
-          <div class="profile-medium-chip">𝕏</div>
-        </div>
-        <div class="profile-name">Bill<br>Simmons</div>
-        <div class="profile-title">Founder, The Ringer · NBA on TNT · The Bill Simmons Podcast</div>
-      </div>
-      <div class="otr-box">
-        <div class="otr-box-label">OTR Score</div>
-        <div class="otr-box-row">
-          <div>
-            <div class="otr-box-number">791</div>
-            <div class="otr-box-rank">Ranked <span>#2 overall</span> · Top 5% all-time</div>
-          </div>
-          <div>
-            <div class="otr-box-stats">
-              <div><div class="otr-stat-val up">66.7%</div><div class="otr-stat-label">Accuracy</div></div>
-              <div><div class="otr-stat-val neu">15</div><div class="otr-stat-label">Takes</div></div>
-              <div><div class="otr-stat-val up">10</div><div class="otr-stat-label">Correct</div></div>
-              <div><div class="otr-stat-val dn">5</div><div class="otr-stat-label">Wrong</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sb-box">
-        <div class="sb-box-platform">
-          <span style="font-size:13px">💙</span>
-          <div class="sb-box-platform-name">FanDuel</div>
-          <div class="sb-box-badge">Sportsbook Score</div>
-        </div>
-        <div class="sb-box-divider"></div>
-        <div class="sb-box-score" style="color:var(--green)">+7–3</div>
-        <div class="sb-box-stats">
-          <div><div class="sb-box-stat-val up">70%</div><div class="sb-box-stat-label">Hit Rate</div></div>
-          <div><div class="sb-box-stat-val up">10</div><div class="sb-box-stat-label">Bets</div></div>
-          <div><div class="sb-box-stat-val up">7</div><div class="sb-box-stat-label">Won</div></div>
-          <div><div class="sb-box-stat-val dn">3</div><div class="sb-box-stat-label">Lost</div></div>
-        </div>
-        <div class="sb-box-note">2025–26 · FanDuel<br>#fdpartner verified</div>
-      </div>
-    </div>
-  </div>
-</div>
+￼
 
-<!-- TABS -->
-<div class="profile-tabs">
-  <button class="profile-tab active" onclick="showProfileTab('takes',this)">Takes</button>
-  <button class="profile-tab" onclick="showProfileTab('bets',this)">FanDuel Bets</button>
-  <button class="profile-tab" onclick="showProfileTab('hof',this)">Hall of Fame</button>
-  <button class="profile-tab" onclick="showProfileTab('breakdown',this)">Breakdown</button>
-</div>
+The Ringer
+Podcast
+Column
+TV
+𝕏
+Bill
+Simmons
+Founder, The Ringer · NBA on TNT · The Bill Simmons Podcast
+OTR Score
+791
+Ranked #2 overall · Top 5% all-time
+66.7%
+Accuracy
+15
+Takes
+10
+Correct
+5
+Wrong
+💙
+FanDuel
+Sportsbook Score
 
-<!-- TAKES TAB -->
-<div class="profile-panel active" id="panel-takes">
++7–3
+70%
+Hit Rate
+10
+Bets
+7
+Won
+3
+Lost
+2025–26 · FanDuel
+#fdpartner verified
+Takes FanDuel Bets Hall of Fame Breakdown 
+15
+TOTAL TAKES
+10
+CORRECT
+5
+WRONG
++447
+NET SCORE
+NBA WIN TOTAL OVER/UNDERS — 2025-26 PRESEASON
+5-4
+OVER 42.5
+Milwaukee Bucks
+"Giannis is the best player in the Eastern Conference. Milwaukee has roster depth, great shooting splits, and a motivated Myles Turner. I'm taking the over."
+−171
+Burned
+Wrong ✗
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Final record: 32-50
+Consensus 1.5× NBA · Season 
+OVER 56.5
+Cleveland Cavaliers
+"Cleveland had a +9.2 net rating last year, third-best in the league. Evan Mobley is due for a breakout. The downgrade of teams around them in the East has me backing the over."
+−114
+Burned
+Wrong ✗
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched under
+Safe 1× NBA · Season 
+UNDER 35.5
+Sacramento Kings
+"I'm on a hard under for the Kings. Too many question marks on the roster and a Keegan Murray injury before the season even starts. This team is not complete."
++171
+Banked
+Correct ✓
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched under
+Consensus 1.5× NBA · Season 
+OVER 40.5
+Dallas Mavericks
+"Cooper Flagg has a chance to be the most impactful American rookie since Anthony Davis. Dallas has the depth and length to give teams problems every night."
++171
+Banked
+Correct ✓
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched over
+Consensus 1.5× NBA · Season 
+UNDER 19.5
+Brooklyn Nets
+"The Nets roster is full of young guards and too many ball-handlers. Too many question marks on how this team will gel. Another long season for Brooklyn."
+−114
+Burned
+Wrong ✗
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched over
+Safe 1× NBA · Season 
+OVER 53.5
+Denver Nuggets
+"This could be Denver's best roster since drafting Jokic. The additions of Cameron Johnson, Bruce Brown, Valanciunas, and Hardaway make this team dangerous top to bottom."
+−228
+Burned
+Wrong ✗
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched under
+Bold 2× NBA · Season 
+OVER 43.5
+San Antonio Spurs
+"Every great big man in NBA history had their Year Three breakout — Tim Duncan, Kareem, Hakeem, Shaq, Robinson. Wemby's Year Three is coming. San Antonio goes over."
++228
+Banked
+Correct ✓
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched over · Spurs made playoffs
+Bold 2× NBA · Season 
+OVER 62.5
+Oklahoma City Thunder
+"OKC had a +12.7 net rating last season — the best in NBA history. Largely unchanged roster. I drew comparisons to the 1992 Bulls who won 67 games after a championship. Thunder go over."
++228
+Banked
+Correct ✓
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Final record: 64-18 · Clinched over
+Bold 2× NBA · Season 
+UNDER 20.5
+Washington Wizards
+"Washington already overperformed an expected 15-win record last season. A laundry list of personnel changes, third-youngest roster in the league. Under."
++114
+Banked
+Correct ✓
+The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025
+Clinched under
+Safe 1× NBA · Season 
+ADDITIONAL TAKES — NFL & NBA 2025
+5-1
+"I really believe in Drake Maye. I genuinely think this could be a breakout thing. I have them at ten and seven."
++216
+Banked
+Correct ✓
+The Bill Simmons Podcast · Aug 28, 2025
+Patriots finished 14-3 — Simmons undersold it
+Bold 2× NFL · Season Record 
+"The Patriots can reach the Super Bowl. I'm not ruling it out. This team has the pieces and Vrabel knows how to win in January."
++168
+Banked
+Correct ✓
+The Bill Simmons Podcast · Dec 23, 2025
+Patriots reached Super Bowl LX · Lost to Seahawks
+Contrarian 2.5× NFL · Playoff 
+"I did not have Patrick Mahomes at the top of the pyramid. When it came right down to it, I just think Josh Allen's the best quarterback in the league. Game by game, regular season, durability. I just don't think it's fair to put Mahomes over Allen."
++255
+Banked
+Correct ✓
+The Bill Simmons Podcast w/ Sheil Kapadia · Aug 10, 2025
+Allen had better 2025 season · Chiefs missed playoffs · Mahomes .500 record
+Contrarian 2.5× NFL · Player 
+"I expected Denver to make the Finals and play either the Celtics or the Knicks. Those are the teams. That's your Finals."
+−126
+Burned
+Wrong ✗
+The Bill Simmons Podcast · April 2026 (pre-playoffs)
+Nuggets lost R1 to Timberwolves · Celtics lost R1 to 76ers
+Consensus 1.5× NBA · Championship 
+"Every great big man in NBA history had their Year Three breakout. I could see Wemby having one of those 27-in-22-minutes games on the biggest stage. His Year Three is coming and it's going to be something."
++204
+Banked
+Correct ✓
+The Bill Simmons Podcast · Oct & June 2025
+Wemby won unanimous DPOY · Led Spurs to playoffs · Mathurin scored exactly 27 in 22 mins in Finals Game 3
+Bold 2× NBA · Player Trajectory 
+"SGA is going to win the MVP. SGA looks like he's veering into this Michael Jordan, Kobe Bryant area. I think it's already happened. He has a chance to be Finals MVP two years in a row."
++153
+Banked
+Correct ✓
+The Bill Simmons Podcast · March 2026
+SGA won back-to-back MVP · 83 of 100 first-place votes
+Consensus 1.5× NBA · Player / Award 
+10
+TOTAL BETS
+7
+WON
+3
+LOST
+70%
+HIT RATE
+NFL WIN TOTAL FUTURES — 2025 SEASON PRESEASON · FANDUEL
+5-2
+OVER 9.5 WINS
+Denver Broncos
+"My favorite 2025 NFL future bet has remained the same all summer — Denver over 9.5 wins."
+WON
+Cashed
+Correct ✓
+@BillSimmons · #fdpartner · Pre-season 2025
+Denver finished 14-3 · AFC No. 1 seed · Lost AFC Championship to Patriots
+NFL · Futures FanDuel 
+UNDER 7.5 WINS
+Miami Dolphins
+"Miami under 7.5 wins — one of my seven favorite NFL futures bets this season."
+WON
+Cashed
+Correct ✓
+@BillSimmons · #fdpartner · Pre-season 2025
+Dolphins finished 7-10 · Missed playoffs · Fired GM and HC
+NFL · Futures FanDuel 
+UNDER 7.5 WINS
+Dallas Cowboys
+"Dallas under 7.5 — one of my seven favorite NFL futures bets this season."
+WON
+Cashed
+Correct ✓
+@BillSimmons · #fdpartner · Pre-season 2025
+Cowboys finished 7-9-1 · Missed playoffs
+NFL · Futures FanDuel 
+OVER 7.5 WINS
+Chicago Bears
+"Team Simmons and House are all in on Ben Johnson's revamped Bears roster. Chicago over 7.5 wins."
+WON
+Cashed
+Correct ✓
+@TheRinger · #TheRinger107 · #fdpartner · Sept 5, 2025
+Bears finished 11-6 · Won NFC North · Lost Divisional round to Rams in OT
+NFL · Futures FanDuel 
+OVER 8.5 WINS
+Seattle Seahawks
+"Seattle over 8.5 wins — one of my seven favorite NFL futures bets this season."
+WON
+Cashed
+Correct ✓
+@BillSimmons · #fdpartner · Pre-season 2025
+Seattle finished 14-3 · Won Super Bowl LX · Defeated Patriots 29-13
+NFL · Futures FanDuel 
+OVER 9.5 WINS
+Green Bay Packers
+"GB over 9.5 wins — one of my seven favorite NFL futures bets this season."
+LOST
+Burned
+Wrong ✗
+@BillSimmons · #fdpartner · Pre-season 2025
+Packers finished 9-7-1 · Just missed the over · Lost Wild Card to Bears
+NFL · Futures FanDuel 
+OVER 6.5 WINS
+Las Vegas Raiders
+"Vegas over 6.5 wins — one of my seven favorite NFL futures bets this season."
+LOST
+Burned
+Wrong ✗
+@BillSimmons · #fdpartner · Pre-season 2025
+Raiders finished 3-14 · Worst record in NFL · Earned No. 1 pick in 2026 draft
+NFL · Futures FanDuel 
+IN-SEASON & NBA BETS — 2025-26
+2-1
+SGP +153
+49ers + McCaffrey TD · Week 6
+"New one: SF +3.5 + McCaffrey TD = +153. Fav bets on FanDuel."
+LOST
+Burned
+Wrong ✗
+@BillSimmons · #fdpartner · Week 6, Oct 12, 2025
+49ers lost to Buccaneers 30-19 · SGP did not cash
+NFL · Same-Game Parlay FanDuel 
+PARLAY +900
+Wemby SGP · NBA Playoffs
+"We hit a big parlay on Wemby that was like 9-to-1. I've been doing Wednesday bets on FanDuel. I actually won the last two."
++900
+Cashed
+Correct ✓
+The Bill Simmons Podcast · April 15, 2026 (Play-In episode)
+Wembanyama parlay hit · 9-to-1 payout confirmed on air
+NBA · Parlay FanDuel 
+TOP 5 +650
+Justin Rose · The Masters
+"Justin Rose top 5 Masters plus 650 — that one hit too. Almost won Dustin Rose to win the Masters at 35 to 1. He let me down, but he still got the top 5."
++650
+Cashed
+Correct ✓
+The Bill Simmons Podcast · April 15, 2026 (Play-In episode)
+Justin Rose finished top 5 at The Masters · Confirmed on air
+Golf · Top 5 Finish FanDuel 
+OTR Hall of Fame — Simmons Edition
+✓
+🏆 Greatest Take
+"Every great big man in NBA history had their Year Three breakout. I could see Wemby having one of those 27-in-22-minutes games on the biggest stage."
+Oct 2025 · The Ringer O/U Pod · Bold (2×) · Player trajectory · Mathurin scored exactly 27 in 22 mins in Finals Game 3
++204
+✗
+💀 Worst Take
+"This could be Denver's best roster since drafting Jokic. The additions of Cameron Johnson, Bruce Brown, Valanciunas make this team dangerous top to bottom."
+Oct 2025 · FanDuel Research · Bold (2×) · Nuggets over 53.5 · Finished well under · Lost R1
+−228
+✓
+📈 Best Call
+"I did not have Patrick Mahomes at the top of the pyramid. I just think Josh Allen's the best quarterback in the league."
+Aug 2025 · Podcast w/ Sheil Kapadia · Contrarian (2.5×) · Chiefs missed playoffs · Allen went deep
++255
+✗
+🧊 Biggest Miss
+"Giannis is the best player in the Eastern Conference. Milwaukee has roster depth, great shooting splits, and a motivated Myles Turner. I'm taking the over."
+Oct 2025 · FanDuel Research · Consensus (1.5×) · Bucks over 42.5 · Finished 32-50
+−171
+Accountability Record
+VOLUNTARY CORRECTIONS
+8
+Revisited wrong takes on air
+DELETED POSTS
+3
+Flagged and archived by OTR
+INTEGRITY SCORE
++44
+Net accountability adjustment
+Accuracy Rate
+66.7%
+10 correct of 15 resolved
 
-  <div class="score-summary">
-    <div class="score-summary-item"><div class="score-summary-val neu">15</div><div class="score-summary-label">Total Takes</div></div>
-    <div class="score-summary-item"><div class="score-summary-val pos">10</div><div class="score-summary-label">Correct</div></div>
-    <div class="score-summary-item"><div class="score-summary-val neg">5</div><div class="score-summary-label">Wrong</div></div>
-    <div class="score-summary-item"><div class="score-summary-val pos">+447</div><div class="score-summary-label">Net Score</div></div>
-  </div>
+Net OTR Score
++447
++1,095 banked · −648 burned
 
-  <!-- NBA OVER/UNDERS -->
-  <div class="take-section-head">
-    NBA Win Total Over/Unders — 2025-26 Preseason
-    <span>5-4</span>
-  </div>
-  <div class="calls-stack">
+NBA O/U Record
+5-4
+9 picks · avg line 159 pts
 
-    <!-- T1: Bucks OVER - WRONG -->
-    <div class="call-card wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 42.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Milwaukee Bucks</span>
-          </div>
-          <div class="call-quote">"Giannis is the best player in the Eastern Conference. Milwaukee has roster depth, great shooting splits, and a motivated Myles Turner. I'm taking the over."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">−171</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Final record: 32-50</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Consensus 1.5×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+NFL Record
+3-0
+Perfect on NFL takes so far
 
-    <!-- T2: Cavaliers OVER - WRONG -->
-    <div class="call-card wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 56.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Cleveland Cavaliers</span>
-          </div>
-          <div class="call-quote">"Cleveland had a +9.2 net rating last year, third-best in the league. Evan Mobley is due for a breakout. The downgrade of teams around them in the East has me backing the over."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">−114</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched under</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Safe 1×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+Accuracy by Sport
+NBA
+58.3%
+12 takes · 7 correct
+NFL
+100%
+3 takes · 3 correct
+MLB
+—
+No takes yet
+NHL
+—
+No takes yet
+Head-to-Head vs. Personalities
+Same topic — who got it right?
+vs. Russillo
 
-    <!-- T3: Kings UNDER - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag under">UNDER 35.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Sacramento Kings</span>
-          </div>
-          <div class="call-quote">"I'm on a hard under for the Kings. Too many question marks on the roster and a Keegan Murray injury before the season even starts. This team is not complete."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+171</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched under</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Consensus 1.5×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+8–10 L
+vs. Cowherd
 
-    <!-- T4: Mavericks OVER - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 40.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Dallas Mavericks</span>
-          </div>
-          <div class="call-quote">"Cooper Flagg has a chance to be the most impactful American rookie since Anthony Davis. Dallas has the depth and length to give teams problems every night."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+171</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched over</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Consensus 1.5×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+14–6 W
+vs. S.A. Smith
 
-    <!-- T5: Nets UNDER - WRONG -->
-    <div class="call-card wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag under">UNDER 19.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Brooklyn Nets</span>
-          </div>
-          <div class="call-quote">"The Nets roster is full of young guards and too many ball-handlers. Too many question marks on how this team will gel. Another long season for Brooklyn."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">−114</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched over</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Safe 1×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+11–6 W
+vs. Portnoy
 
-    <!-- T6: Nuggets OVER - WRONG -->
-    <div class="call-card wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 53.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Denver Nuggets</span>
-          </div>
-          <div class="call-quote">"This could be Denver's best roster since drafting Jokic. The additions of Cameron Johnson, Bruce Brown, Valanciunas, and Hardaway make this team dangerous top to bottom."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">−228</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched under</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Bold 2×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+16–4 W
+vs. Big Cat
 
-    <!-- T7: Spurs OVER - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 43.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">San Antonio Spurs</span>
-          </div>
-          <div class="call-quote">"Every great big man in NBA history had their Year Three breakout — Tim Duncan, Kareem, Hakeem, Shaq, Robinson. Wemby's Year Three is coming. San Antonio goes over."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+228</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched over · Spurs made playoffs</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Bold 2×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
+5–7 L
+OTR
 
-    <!-- T8: Thunder OVER - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 62.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Oklahoma City Thunder</span>
-          </div>
-          <div class="call-quote">"OKC had a +12.7 net rating last season — the best in NBA history. Largely unchanged roster. I drew comparisons to the 1992 Bulls who won 67 games after a championship. Thunder go over."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+228</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Final record: 64-18 · Clinched over</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Bold 2×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T9: Wizards UNDER - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag under">UNDER 20.5</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Washington Wizards</span>
-          </div>
-          <div class="call-quote">"Washington already overperformed an expected 15-win record last season. A laundry list of personnel changes, third-youngest roster in the league. Under."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+114</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · FanDuel Research · Oct 17, 2025</div>
-        <div class="call-date">Clinched under</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Safe 1×</span>
-          <span class="call-tag cat">NBA · Season</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ADDITIONAL TAKES -->
-  <div class="take-section-head">
-    Additional Takes — NFL &amp; NBA 2025
-    <span>5-1</span>
-  </div>
-  <div class="calls-stack">
-
-    <!-- T10: Patriots 10-7 - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div class="call-quote">"I really believe in Drake Maye. I genuinely think this could be a breakout thing. I have them at ten and seven."</div>
-        <div class="call-right">
-          <div class="call-line correct">+216</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · Aug 28, 2025</div>
-        <div class="call-date">Patriots finished 14-3 — Simmons undersold it</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Bold 2×</span>
-          <span class="call-tag cat">NFL · Season Record</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T11: Patriots Super Bowl - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div class="call-quote">"The Patriots can reach the Super Bowl. I'm not ruling it out. This team has the pieces and Vrabel knows how to win in January."</div>
-        <div class="call-right">
-          <div class="call-line correct">+168</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · Dec 23, 2025</div>
-        <div class="call-date">Patriots reached Super Bowl LX · Lost to Seahawks</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Contrarian 2.5×</span>
-          <span class="call-tag cat">NFL · Playoff</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T12: Josh Allen #1 QB - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div class="call-quote">"I did not have Patrick Mahomes at the top of the pyramid. When it came right down to it, I just think Josh Allen's the best quarterback in the league. Game by game, regular season, durability. I just don't think it's fair to put Mahomes over Allen."</div>
-        <div class="call-right">
-          <div class="call-line correct">+255</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast w/ Sheil Kapadia · Aug 10, 2025</div>
-        <div class="call-date">Allen had better 2025 season · Chiefs missed playoffs · Mahomes .500 record</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Contrarian 2.5×</span>
-          <span class="call-tag cat">NFL · Player</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T13: Nuggets/Celtics in Finals - WRONG -->
-    <div class="call-card wrong">
-      <div class="call-top">
-        <div class="call-quote">"I expected Denver to make the Finals and play either the Celtics or the Knicks. Those are the teams. That's your Finals."</div>
-        <div class="call-right">
-          <div class="call-line wrong">−126</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · April 2026 (pre-playoffs)</div>
-        <div class="call-date">Nuggets lost R1 to Timberwolves · Celtics lost R1 to 76ers</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Consensus 1.5×</span>
-          <span class="call-tag cat">NBA · Championship</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T14: Wemby Year 3 - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div class="call-quote">"Every great big man in NBA history had their Year Three breakout. I could see Wemby having one of those 27-in-22-minutes games on the biggest stage. His Year Three is coming and it's going to be something."</div>
-        <div class="call-right">
-          <div class="call-line correct">+204</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · Oct &amp; June 2025</div>
-        <div class="call-date">Wemby won unanimous DPOY · Led Spurs to playoffs · Mathurin scored exactly 27 in 22 mins in Finals Game 3</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Bold 2×</span>
-          <span class="call-tag cat">NBA · Player Trajectory</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- T15: SGA back-to-back MVP - CORRECT -->
-    <div class="call-card correct">
-      <div class="call-top">
-        <div class="call-quote">"SGA is going to win the MVP. SGA looks like he's veering into this Michael Jordan, Kobe Bryant area. I think it's already happened. He has a chance to be Finals MVP two years in a row."</div>
-        <div class="call-right">
-          <div class="call-line correct">+153</div>
-          <div class="call-line-label">Banked</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · March 2026</div>
-        <div class="call-date">SGA won back-to-back MVP · 83 of 100 first-place votes</div>
-        <div class="call-tags">
-          <span class="call-tag diff">Consensus 1.5×</span>
-          <span class="call-tag cat">NBA · Player / Award</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- BETS TAB -->
-<div class="profile-panel" id="panel-bets">
-
-  <div class="score-summary">
-    <div class="score-summary-item"><div class="score-summary-val neu">10</div><div class="score-summary-label">Total Bets</div></div>
-    <div class="score-summary-item"><div class="score-summary-val pos">7</div><div class="score-summary-label">Won</div></div>
-    <div class="score-summary-item"><div class="score-summary-val neg">3</div><div class="score-summary-label">Lost</div></div>
-    <div class="score-summary-item"><div class="score-summary-val pos">70%</div><div class="score-summary-label">Hit Rate</div></div>
-  </div>
-
-  <!-- NFL FUTURES -->
-  <div class="take-section-head">
-    NFL Win Total Futures — 2025 Season Preseason · FanDuel
-    <span>5-2</span>
-  </div>
-  <div class="calls-stack">
-
-    <!-- Bet 1: Denver OVER -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 9.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Denver Broncos</span>
-          </div>
-          <div class="call-quote">"My favorite 2025 NFL future bet has remained the same all summer — Denver over 9.5 wins."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">WON</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Denver finished 14-3 · AFC No. 1 seed · Lost AFC Championship to Patriots</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 2: Miami UNDER -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag under">UNDER 7.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Miami Dolphins</span>
-          </div>
-          <div class="call-quote">"Miami under 7.5 wins — one of my seven favorite NFL futures bets this season."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">WON</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Dolphins finished 7-10 · Missed playoffs · Fired GM and HC</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 3: Dallas UNDER -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag under">UNDER 7.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Dallas Cowboys</span>
-          </div>
-          <div class="call-quote">"Dallas under 7.5 — one of my seven favorite NFL futures bets this season."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">WON</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Cowboys finished 7-9-1 · Missed playoffs</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 4: Chicago OVER -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 7.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Chicago Bears</span>
-          </div>
-          <div class="call-quote">"Team Simmons and House are all in on Ben Johnson's revamped Bears roster. Chicago over 7.5 wins."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">WON</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@TheRinger · #TheRinger107 · #fdpartner · Sept 5, 2025</div>
-        <div class="call-date">Bears finished 11-6 · Won NFC North · Lost Divisional round to Rams in OT</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 5: Seattle OVER -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 8.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Seattle Seahawks</span>
-          </div>
-          <div class="call-quote">"Seattle over 8.5 wins — one of my seven favorite NFL futures bets this season."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">WON</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Seattle finished 14-3 · Won Super Bowl LX · Defeated Patriots 29-13</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 6: GB OVER - LOST -->
-    <div class="call-card bet wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 9.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Green Bay Packers</span>
-          </div>
-          <div class="call-quote">"GB over 9.5 wins — one of my seven favorite NFL futures bets this season."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">LOST</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Packers finished 9-7-1 · Just missed the over · Lost Wild Card to Bears</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 7: Vegas OVER - LOST -->
-    <div class="call-card bet wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span class="ou-tag over">OVER 6.5 wins</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Las Vegas Raiders</span>
-          </div>
-          <div class="call-quote">"Vegas over 6.5 wins — one of my seven favorite NFL futures bets this season."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">LOST</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Pre-season 2025</div>
-        <div class="call-date">Raiders finished 3-14 · Worst record in NFL · Earned No. 1 pick in 2026 draft</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Futures</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- WEEK SPECIFIC BETS -->
-  <div class="take-section-head">
-    In-Season &amp; NBA Bets — 2025-26
-    <span>2-1</span>
-  </div>
-  <div class="calls-stack">
-
-    <!-- Bet 8: SF SGP - LOST -->
-    <div class="call-card bet wrong">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.08em;padding:2px 7px;border-radius:3px;background:rgba(232,75,42,0.08);color:var(--red);border:1px solid rgba(232,75,42,0.2)">SGP +153</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">49ers + McCaffrey TD · Week 6</span>
-          </div>
-          <div class="call-quote">"New one: SF +3.5 + McCaffrey TD = +153. Fav bets on FanDuel."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line wrong">LOST</div>
-          <div class="call-line-label">Burned</div>
-          <div class="verdict-badge vb-wrong">Wrong ✗</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">@BillSimmons · #fdpartner · Week 6, Oct 12, 2025</div>
-        <div class="call-date">49ers lost to Buccaneers 30-19 · SGP did not cash</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NFL · Same-Game Parlay</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 9: Wemby Parlay - WON -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.08em;padding:2px 7px;border-radius:3px;background:rgba(61,191,122,0.08);color:var(--green);border:1px solid rgba(61,191,122,0.2)">PARLAY +900</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Wemby SGP · NBA Playoffs</span>
-          </div>
-          <div class="call-quote">"We hit a big parlay on Wemby that was like 9-to-1. I've been doing Wednesday bets on FanDuel. I actually won the last two."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+900</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · April 15, 2026 (Play-In episode)</div>
-        <div class="call-date">Wembanyama parlay hit · 9-to-1 payout confirmed on air</div>
-        <div class="call-tags">
-          <span class="call-tag cat">NBA · Parlay</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bet 10: Justin Rose Masters - WON -->
-    <div class="call-card bet correct">
-      <div class="call-top">
-        <div>
-          <div style="margin-bottom:5px;display:flex;gap:6px;align-items:center">
-            <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.08em;padding:2px 7px;border-radius:3px;background:rgba(61,191,122,0.08);color:var(--green);border:1px solid rgba(61,191,122,0.2)">TOP 5 +650</span>
-            <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted)">Justin Rose · The Masters</span>
-          </div>
-          <div class="call-quote">"Justin Rose top 5 Masters plus 650 — that one hit too. Almost won Dustin Rose to win the Masters at 35 to 1. He let me down, but he still got the top 5."</div>
-        </div>
-        <div class="call-right">
-          <div class="call-line correct">+650</div>
-          <div class="call-line-label">Cashed</div>
-          <div class="verdict-badge vb-correct">Correct ✓</div>
-        </div>
-      </div>
-      <div class="call-bottom">
-        <div class="call-source">The Bill Simmons Podcast · April 15, 2026 (Play-In episode)</div>
-        <div class="call-date">Justin Rose finished top 5 at The Masters · Confirmed on air</div>
-        <div class="call-tags">
-          <span class="call-tag cat">Golf · Top 5 Finish</span>
-          <span class="call-tag diff">FanDuel</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- HALL OF FAME TAB -->
-<div class="profile-panel" id="panel-hof">
-  <div style="margin-bottom:18px" class="section-label">OTR Hall of Fame — Simmons Edition</div>
-  <div class="hof-grid">
-    <div class="hof-card fame">
-      <div class="hof-watermark">✓</div>
-      <div class="hof-label">🏆 Greatest Take</div>
-      <div class="hof-quote">"Every great big man in NBA history had their Year Three breakout. I could see Wemby having one of those 27-in-22-minutes games on the biggest stage."</div>
-      <div class="hof-context">Oct 2025 · The Ringer O/U Pod · Bold (2×) · Player trajectory · Mathurin scored exactly 27 in 22 mins in Finals Game 3</div>
-      <div class="hof-score">+204</div>
-    </div>
-    <div class="hof-card shame">
-      <div class="hof-watermark">✗</div>
-      <div class="hof-label">💀 Worst Take</div>
-      <div class="hof-quote">"This could be Denver's best roster since drafting Jokic. The additions of Cameron Johnson, Bruce Brown, Valanciunas make this team dangerous top to bottom."</div>
-      <div class="hof-context">Oct 2025 · FanDuel Research · Bold (2×) · Nuggets over 53.5 · Finished well under · Lost R1</div>
-      <div class="hof-score">−228</div>
-    </div>
-    <div class="hof-card fame">
-      <div class="hof-watermark">✓</div>
-      <div class="hof-label">📈 Best Call</div>
-      <div class="hof-quote">"I did not have Patrick Mahomes at the top of the pyramid. I just think Josh Allen's the best quarterback in the league."</div>
-      <div class="hof-context">Aug 2025 · Podcast w/ Sheil Kapadia · Contrarian (2.5×) · Chiefs missed playoffs · Allen went deep</div>
-      <div class="hof-score">+255</div>
-    </div>
-    <div class="hof-card shame">
-      <div class="hof-watermark">✗</div>
-      <div class="hof-label">🧊 Biggest Miss</div>
-      <div class="hof-quote">"Giannis is the best player in the Eastern Conference. Milwaukee has roster depth, great shooting splits, and a motivated Myles Turner. I'm taking the over."</div>
-      <div class="hof-context">Oct 2025 · FanDuel Research · Consensus (1.5×) · Bucks over 42.5 · Finished 32-50</div>
-      <div class="hof-score">−171</div>
-    </div>
-  </div>
-  <div style="margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px">
-    <div class="section-label" style="margin-bottom:12px">Accountability Record</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
-      <div>
-        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Voluntary corrections</div>
-        <div style="font-family:var(--font-display);font-size:28px;color:var(--green)">8</div>
-        <div style="font-size:11px;color:var(--muted)">Revisited wrong takes on air</div>
-      </div>
-      <div>
-        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Deleted posts</div>
-        <div style="font-family:var(--font-display);font-size:28px;color:var(--red)">3</div>
-        <div style="font-size:11px;color:var(--muted)">Flagged and archived by OTR</div>
-      </div>
-      <div>
-        <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Integrity Score</div>
-        <div style="font-family:var(--font-display);font-size:28px;color:var(--yellow)">+44</div>
-        <div style="font-size:11px;color:var(--muted)">Net accountability adjustment</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- BREAKDOWN TAB -->
-<div class="profile-panel" id="panel-breakdown">
-  <div class="breakdown-grid">
-    <div class="bk-card"><div class="bk-label">Accuracy Rate</div><div class="bk-val">66.7%</div><div class="bk-sub">10 correct of 15 resolved</div><div class="bar-track"><div class="bar-fill green" style="width:66.7%"></div></div></div>
-    <div class="bk-card"><div class="bk-label">Net OTR Score</div><div class="bk-val">+447</div><div class="bk-sub">+1,095 banked · −648 burned</div><div class="bar-track"><div class="bar-fill green" style="width:68%"></div></div></div>
-    <div class="bk-card"><div class="bk-label">NBA O/U Record</div><div class="bk-val">5-4</div><div class="bk-sub">9 picks · avg line 159 pts</div><div class="bar-track"><div class="bar-fill" style="width:56%;background:var(--yellow)"></div></div></div>
-    <div class="bk-card"><div class="bk-label">NFL Record</div><div class="bk-val">3-0</div><div class="bk-sub">Perfect on NFL takes so far</div><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div></div>
-  </div>
-
-  <div class="section-label" style="margin-bottom:10px">Accuracy by Sport</div>
-  <div class="sport-grid" style="margin-bottom:24px">
-    <div class="sport-card"><div class="sport-name">NBA</div><div class="sport-acc mid">58.3%</div><div class="sport-detail">12 takes · 7 correct</div></div>
-    <div class="sport-card"><div class="sport-name">NFL</div><div class="sport-acc strong">100%</div><div class="sport-detail">3 takes · 3 correct</div></div>
-    <div class="sport-card"><div class="sport-name">MLB</div><div class="sport-acc mid">—</div><div class="sport-detail">No takes yet</div></div>
-    <div class="sport-card"><div class="sport-name">NHL</div><div class="sport-acc mid">—</div><div class="sport-detail">No takes yet</div></div>
-  </div>
-
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px">
-    <div class="section-label" style="margin-bottom:6px">Head-to-Head vs. Personalities</div>
-    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Same topic — who got it right?</div>
-    <div class="rivalry-row"><div class="rivalry-name">vs. Russillo</div><div class="rivalry-track"><div class="rivalry-fill lose" style="width:45%"></div></div><div class="rivalry-rec">8–10 L</div></div>
-    <div class="rivalry-row"><div class="rivalry-name">vs. Cowherd</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:70%"></div></div><div class="rivalry-rec">14–6 W</div></div>
-    <div class="rivalry-row"><div class="rivalry-name">vs. S.A. Smith</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:65%"></div></div><div class="rivalry-rec">11–6 W</div></div>
-    <div class="rivalry-row"><div class="rivalry-name">vs. Portnoy</div><div class="rivalry-track"><div class="rivalry-fill win" style="width:80%"></div></div><div class="rivalry-rec">16–4 W</div></div>
-    <div class="rivalry-row"><div class="rivalry-name">vs. Big Cat</div><div class="rivalry-track"><div class="rivalry-fill lose" style="width:42%"></div></div><div class="rivalry-rec">5–7 L</div></div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <div class="footer-logo">OTR <div class="nav-logo-dot"></div></div>
-      <div class="footer-tagline">No take left unaccounted.</div>
-    </div>
-    <div class="footer-links">
-      <a href="/personalities.html">Personalities</a>
-      <a href="/methodology.html">Methodology</a>
-      <a href="/about.html">About</a>
-    </div>
-    <div class="footer-right">
-      <div class="footer-copy">© 2026 OTRScore.com</div>
-      <div class="footer-legal"><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
-    </div>
-  </div>
-</footer>
-
-<script src="/scripts/main.js"></script>
-</body>
-</html>
+No take left unaccounted.
+Personalities Methodology About 
+© 2026 OTRScore.com
+TermsPrivacy
